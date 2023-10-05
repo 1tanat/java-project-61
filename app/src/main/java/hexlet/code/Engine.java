@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Game2;
 import hexlet.code.games.Game3;
+import hexlet.code.games.Game4;
 
 import java.util.Scanner;
 
@@ -20,6 +21,9 @@ public class Engine {
                 break;
             case 3:
                 System.out.println("What is the result of the expression?");
+                break;
+            case 4:
+                System.out.println("Find the greatest common divisor of given numbers.");
                 break;
             default:
                 break;
@@ -40,6 +44,9 @@ public class Engine {
                     break;
                 case 3:
                     data = Game3.calc();
+                    break;
+                case 4:
+                    data = Game4.gcd();
                     break;
                 default:
                     break;

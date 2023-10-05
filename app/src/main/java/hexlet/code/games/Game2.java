@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import org.apache.commons.lang3.RandomUtils;
-import java.util.Scanner;
 public class Game2 {
     public static String[] even() {
         String[] data = new String[2];

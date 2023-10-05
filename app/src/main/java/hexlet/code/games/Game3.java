@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import org.apache.commons.lang3.RandomUtils;
-import java.util.Scanner;
 public class Game3 {
     public static String[] calc() {
         String[] data = new String[2];
@@ -9,11 +8,11 @@ public class Game3 {
         int num1 = RandomUtils.nextInt(1, 100);
         int num2 = RandomUtils.nextInt(1, 100);
 
-        int op_number = RandomUtils.nextInt(1, 4);
+        int opNumber = RandomUtils.nextInt(1, 4);
         String op;
         int answer;
 
-        switch (op_number) {
+        switch (opNumber) {
             case 1 :
                 op = " + ";
                 answer = num1 + num2;

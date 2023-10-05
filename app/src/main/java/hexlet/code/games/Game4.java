@@ -10,15 +10,15 @@ public class Game4 {
         int num2 = RandomUtils.nextInt(1, 100);
 
         data[0] = num1 + " " + num2;
-        data[1] = String.valueOf(find_GCD(num1, num2));
+        data[1] = String.valueOf(findGCD(num1, num2));
 
         return data;
     }
-    public static int find_GCD(int a, int b) {
+    public static int findGCD(int a, int b) {
         if (b == 0) {
             return a;
         } else {
-            return find_GCD(b, a%b);
+            return findGCD(b, a % b);
         }
     }
 }

@@ -9,8 +9,8 @@ public class Game3 {
         int num2 = RandomUtils.nextInt(1, 100);
 
         int opNumber = RandomUtils.nextInt(1, 4);
-        String op;
-        int answer;
+        String op = null;
+        int answer = 0;
 
         switch (opNumber) {
             case 1 :
@@ -26,8 +26,6 @@ public class Game3 {
                 answer = num1 * num2;
                 break;
             default:
-                op = null;
-                answer = 0;
                 break;
         }
 

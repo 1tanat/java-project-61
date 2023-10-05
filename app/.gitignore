@@ -4,6 +4,9 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+#Checkstyle
+checkstyle.xml:Zone.Identifier
+
 ### IntelliJ IDEA ###
 .idea
 .idea/modules.xml

@@ -2,6 +2,8 @@ plugins {
     id 'java'
     id 'application'
     id 'checkstyle'
+    id 'se.patrikerdes.use-latest-versions' version '0.2.18'
+    id 'com.github.ben-manes.versions' version '0.48.0'
 }
 
 application {
@@ -16,8 +18,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.9.2')
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
     implementation("org.apache.commons:commons-lang3:3.13.0")
 }
 
@@ -39,6 +41,6 @@ compileJava {
     options.release = 20
 }
 
-run {
+/*run {
     standardInput = System.in
-}
+}*/

@@ -2,8 +2,12 @@ package hexlet.code.games;
 
 import org.apache.commons.lang3.RandomUtils;
 public class Game2 {
-    public static String[] even() {
+    public static String[] even(int count) {
         String[] data = new String[2];
+
+        if (count == 0) {
+            System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        }
 
         int num = RandomUtils.nextInt(1, 100);
         data[0] = Integer.toString(num);

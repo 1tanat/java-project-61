@@ -8,60 +8,37 @@ public class Engine {
     public static void engine(int choice) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        String name = scanner.next();
-        System.out.println("Hello, " + name + "!");
-
-        switch (choice) {
-            case 2:
-                System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-                break;
-            case 3:
-                System.out.println("What is the result of the expression?");
-                break;
-            case 4:
-                System.out.println("Find the greatest common divisor of given numbers.");
-                break;
-            case 5:
-                System.out.println("What number is missing in the progression?");
-            case 6:
-                System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-            default:
-                break;
-        }
+        String name = Cli.greeting();
 
         boolean notTheEnd = true;
         int count = 0;
 
-        String question;
-        String correct;
         String[] data = new String[2];
 
         while (notTheEnd && count < 3) {
 
             switch (choice) {
                 case 2:
-                    data = Game2.even();
+                    data = Game2.even(count);
                     break;
                 case 3:
-                    data = Game3.calc();
+                    data = Game3.calc(count);
                     break;
                 case 4:
-                    data = Game4.gcd();
+                    data = Game4.gcd(count);
                     break;
                 case 5:
-                    data = Game5.progression();
+                    data = Game5.progression(count);
                     break;
                 case 6:
-                    data = Game6.prime();
+                    data = Game6.prime(count);
                     break;
                 default:
                     break;
             }
 
-            question = data[0];
-            correct = data[1];
+            String question = data[0];
+            String correct = data[1];
 
             System.out.println("Question: " + question);
 
@@ -80,6 +57,5 @@ public class Engine {
             }
             count++;
         }
-
     }
 }

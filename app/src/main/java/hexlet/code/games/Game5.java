@@ -2,15 +2,19 @@ package hexlet.code.games;
 
 import org.apache.commons.lang3.RandomUtils;
 public class Game5 {
-    public static String[] progression() {
+    public static String[] progression(int count) {
+        if (count == 0) {
+            System.out.println("What number is missing in the progression?");
+        }
+
         String[] data = new String[2];
 
         int lengthOgProgression = RandomUtils.nextInt(5, 11);
         int emptySpace = RandomUtils.nextInt(1, lengthOgProgression + 1);
-        int first_num = RandomUtils.nextInt(1, 21);
+        int firstNum = RandomUtils.nextInt(1, 21);
         int difference = RandomUtils.nextInt(1, 10);
-        
-        int number = first_num;
+
+        int number = firstNum;
         int answer = 0;
 
         StringBuilder question = new StringBuilder();

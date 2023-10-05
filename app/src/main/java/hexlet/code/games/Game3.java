@@ -2,8 +2,12 @@ package hexlet.code.games;
 
 import org.apache.commons.lang3.RandomUtils;
 public class Game3 {
-    public static String[] calc() {
+    public static String[] calc(int count) {
         String[] data = new String[2];
+
+        if (count == 0) {
+            System.out.println("What is the result of the expression?");
+        }
 
         int num1 = RandomUtils.nextInt(1, 100);
         int num2 = RandomUtils.nextInt(1, 100);

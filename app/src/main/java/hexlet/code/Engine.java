@@ -19,34 +19,19 @@ public class Engine {
 
             switch (choice) {
                 case 2:
-                    if (count == 0) {
-                        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-                    }
-                    data = Game2.even();
+                    data = Game2.even(count);
                     break;
                 case 3:
-                    if (count == 0) {
-                        System.out.println("What is the result of the expression?");
-                    }
-                    data = Game3.calc();
+                    data = Game3.calc(count);
                     break;
                 case 4:
-                    if (count == 0) {
-                        System.out.println("Find the greatest common divisor of given numbers.");
-                    }
-                    data = Game4.gcd();
+                    data = Game4.gcd(count);
                     break;
                 case 5:
-                    if (count == 0) {
-                        System.out.println("What number is missing in the progression?");
-                    }
-                    data = Game5.progression();
+                    data = Game5.progression(count);
                     break;
                 case 6:
-                    if (count == 0) {
-                        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-                    }
-                    data = Game6.prime();
+                    data = Game6.prime(count);
                     break;
                 default:
                     break;

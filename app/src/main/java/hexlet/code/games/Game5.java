@@ -2,7 +2,11 @@ package hexlet.code.games;
 
 import org.apache.commons.lang3.RandomUtils;
 public class Game5 {
-    public static String[] progression() {
+    public static String[] progression(int count) {
+        if (count == 0) {
+            System.out.println("What number is missing in the progression?");
+        }
+
         String[] data = new String[2];
 
         int lengthOgProgression = RandomUtils.nextInt(5, 11);

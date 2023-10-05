@@ -7,10 +7,10 @@ public class Game5 {
 
         int lengthOgProgression = RandomUtils.nextInt(5, 11);
         int emptySpace = RandomUtils.nextInt(1, lengthOgProgression + 1);
-        int first_num = RandomUtils.nextInt(1, 21);
+        int firstNum = RandomUtils.nextInt(1, 21);
         int difference = RandomUtils.nextInt(1, 10);
-        
-        int number = first_num;
+
+        int number = firstNum;
         int answer = 0;
 
         StringBuilder question = new StringBuilder();

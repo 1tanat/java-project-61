@@ -1,30 +1,30 @@
 package hexlet.code;
 
+import hexlet.code.games.Cli;
+
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please enter the game number and press Enter.\n"
-                            + "1 - Greet\n"
-                            + "2 - Even\n"
-                            + "0 - Exit");
+        System.out.println("""
+                Please enter the game number and press Enter.
+                1 - Greet
+                2 - Even
+                3 - Calc
+                0 - Exit""");
+        System.out.print("Your choice: ");
         int choice = scanner.nextInt();
 
-        if (choice == 0) {
-            System.exit(0);
-        }
-
-        System.out.println("Welcome to the Brain Games!");
-        String name = Cli.greeting();
-
         switch (choice) {
-            case 1 :
+            case 0:
+                System.exit(0);
                 break;
-            case 2:
-                Game2.evenOrNot(name);
+            case 1:
+                Cli.greeting();
                 break;
             default:
+                Engine.engine(choice);
                 break;
         }
 

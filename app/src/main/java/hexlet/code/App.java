@@ -18,15 +18,18 @@ public class App {
                 0 - Exit""");
         System.out.print("Your choice: ");
         int choice = scanner.nextInt();
+        System.out.println();
 
         switch (choice) {
             case 0:
                 System.exit(0);
                 break;
             case 1:
+                System.out.println("Welcome to the Brain Games!");
                 Cli.greeting();
                 break;
             default:
+                System.out.println("Welcome to the Brain Games!");
                 Engine.engine(choice);
                 break;
         }

@@ -9,10 +9,15 @@ public class Game5 {
 
         String[] data = new String[2];
 
-        int lengthOgProgression = RandomUtils.nextInt(5, 11);
+        final int maxLength = 11;
+        final int minLength = 5;
+        final int maxDifference = 10;
+        final int maxFirstNum = 21;
+
+        int lengthOgProgression = RandomUtils.nextInt(minLength, maxLength);
         int emptySpace = RandomUtils.nextInt(1, lengthOgProgression + 1);
-        int firstNum = RandomUtils.nextInt(1, 21);
-        int difference = RandomUtils.nextInt(1, 10);
+        int firstNum = RandomUtils.nextInt(1, maxFirstNum);
+        int difference = RandomUtils.nextInt(1, maxDifference);
 
         int number = firstNum;
         int answer = 0;

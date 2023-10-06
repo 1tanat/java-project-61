@@ -10,8 +10,10 @@ public class Game4 {
             System.out.println("Find the greatest common divisor of given numbers.");
         }
 
-        int num1 = RandomUtils.nextInt(1, 100);
-        int num2 = RandomUtils.nextInt(1, 100);
+        final int maxNum = 100;
+
+        int num1 = RandomUtils.nextInt(1, maxNum);
+        int num2 = RandomUtils.nextInt(1, maxNum);
 
         data[0] = num1 + " " + num2;
         data[1] = String.valueOf(findGCD(num1, num2));

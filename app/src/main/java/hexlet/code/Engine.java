@@ -1,6 +1,11 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Cli;
+import hexlet.code.games.Game2;
+import hexlet.code.games.Game3;
+import hexlet.code.games.Game4;
+import hexlet.code.games.Game5;
+import hexlet.code.games.Game6;
 
 import java.util.Scanner;
 
@@ -15,22 +20,28 @@ public class Engine {
 
         String[] data = new String[2];
 
-        while (notTheEnd && count < 3) {
+        final int maxGame = 3;
+        final int game3 = 3;
+        final int game4 = 4;
+        final int game5 = 5;
+        final int game6 = 6;
+
+        while (notTheEnd && count < maxGame) {
 
             switch (choice) {
                 case 2:
                     data = Game2.even(count);
                     break;
-                case 3:
+                case game3:
                     data = Game3.calc(count);
                     break;
-                case 4:
+                case game4:
                     data = Game4.gcd(count);
                     break;
-                case 5:
+                case game5:
                     data = Game5.progression(count);
                     break;
-                case 6:
+                case game6:
                     data = Game6.prime(count);
                     break;
                 default:

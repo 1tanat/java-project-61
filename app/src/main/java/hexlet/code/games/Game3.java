@@ -9,10 +9,13 @@ public class Game3 {
             System.out.println("What is the result of the expression?");
         }
 
-        int num1 = RandomUtils.nextInt(1, 100);
-        int num2 = RandomUtils.nextInt(1, 100);
+        final int maxNum = 100;
+        final int opAmount = 3;
 
-        int opNumber = RandomUtils.nextInt(1, 4);
+        int num1 = RandomUtils.nextInt(1, maxNum);
+        int num2 = RandomUtils.nextInt(1, maxNum);
+
+        int opNumber = RandomUtils.nextInt(1, opAmount + 1);
         String op = null;
         int answer = 0;
 
@@ -25,7 +28,7 @@ public class Game3 {
                 op = " - ";
                 answer = num1 - num2;
                 break;
-            case 3 :
+            case opAmount :
                 op = " * ";
                 answer = num1 * num2;
                 break;

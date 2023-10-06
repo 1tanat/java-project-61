@@ -9,10 +9,11 @@ public class Game6 {
             System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         }
 
-        int num = RandomUtils.nextInt(1, 101);
+        final int maxNum = 101;
+        int num = RandomUtils.nextInt(1, maxNum);
         boolean isPrime = false;
 
-        for (int i = 2; i < num / 2; i++) {
+        for (int i = 2; i < num / 2 + 2; i++) {
             if ((num % i != 0) || num == 2) {
                 isPrime = true;
             } else {

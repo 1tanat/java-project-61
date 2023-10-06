@@ -9,7 +9,9 @@ public class Game2 {
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         }
 
-        int num = RandomUtils.nextInt(1, 100);
+        final int maxNum = 100;
+
+        int num = RandomUtils.nextInt(1, maxNum);
         data[0] = Integer.toString(num);
         data[1] = (num % 2 == 0) ? "yes" : "no";
 
